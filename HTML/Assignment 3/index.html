@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag N Drop API</title>
+    <script defer>
+      //this function will keep dropped object whereever dropped
+      function allow(event) {
+        event.preventDefault();
+      }
+      // This funtion will enable Object Dragging
+      function drag(event) {
+        event.dataTransfer.setData("text", event.target.id);
+      }
+
+      //This function will be called after drop
+      function drop(event) {
+        event.preventDefault();
+        var data = document.createElement('p');
+        var x =  document.getElementById('para').innerHTML;
+        data.innerHTML= x;
+        event.target.appendChild(data);
+
+        document.getElementById('para').innerHTML = '';
+      }
+    </script>
+  </head>
+  <body>
+    <div
+    id="div1"
+      ondrop="drop(event)"
+      ondragover="allow(event)"
+      style="width: 450px; height: 500px; border: 3px solid red"
+    ></div>
+    <p
+    id="para"
+      src="./assets/image.jfif"
+      alt="dummy image"
+      draggable="true"
+      ondragstart="drag(event)"
+      width="320"
+      height="auto"
+    >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni a, corporis eos dolor, minima voluptatum, maiores deleniti nostrum velit ad ea nisi totam? Dicta assumenda nihil non illo aut ea!
+  </p>
+  </body>
+</html>
