@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Changer</title>
+
+    <!-- script with defer keyword -->
+    <script defer>
+      function changeColor() {
+        document.getElementById("paragraph").style.backgroundColor = "grey";
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Div enclosing para -->
+    <div id="main-container">
+      <!-- Paragraph -->
+      <p id="paragraph">
+        This is a paragraph with dummy text Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Quis ipsa dolorum in alias voluptatum
+        veritatis! Delectus doloremque animi quis, maxime illum reiciendis,
+        cupiditate harum, ullam odio tempore fuga assumenda ipsam.
+      </p>
+      <!-- Button To change color -->
+      <input type="button" value="Change Color" onclick="changeColor()" />
+    </div>
+  </body>
+</html>
