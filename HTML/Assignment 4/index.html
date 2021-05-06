@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebWorker</title>
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <div style="border: 3px solid black ; margin: 5px;">
+        <p>Buttons which does not implement Web Worker</p>
+        <br>
+        <p id="para1"></p>
+        <button onclick="noworker()">Start Loop</button>
+        <!-- <button onclick="stopworker()">Stop Loop</button> -->
+        <button onclick="createalert()"> Create PopUp</button>
+    </div>
+
+    
+    <div style="border: 3px solid red; margin: 5px;">
+        <p>Buttons which implements Web Worker</p>
+        <br>
+        <p id="para2"></p>
+        <button onclick="withworker()">Start Loop</button>
+        <button onclick="stopworker()">Stop Loop</button>
+        <button onclick="createalert()"> Create PopUp</button>
+    </div>
+    
+</body>
+</html>
