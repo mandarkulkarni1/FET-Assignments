@@ -1,0 +1,20 @@
+#container1 {
+    width: 70%;
+    justify-content: center;
+    margin: auto;
+}
+
+button{
+    margin: 1px;
+    padding: 7px;
+    border-radius: 8px;
+}
+
+a{
+    display: block;
+    padding: 20px;
+    margin: 5px;
+    border-bottom:1px solid salmon;
+    width:150px;
+    text-align: center;
+}
